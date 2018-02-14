@@ -31,8 +31,8 @@ public class ClientRunner extends Mayflower
 
         GameWorld world = new GameWorld(im);
         client.setWorld(world);
-
         Mayflower.setWorld(world);
+
     }
 
     public static void main(String[] args)
