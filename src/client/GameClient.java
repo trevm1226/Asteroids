@@ -43,7 +43,7 @@ public class GameClient extends Client implements GameMode
                 int y = Integer.parseInt(parts2[2]);
                 int r = Integer.parseInt(parts2[3]);
 
-                actors.add(new GameActor(img, x, y, r));
+                //actors.add(new GameActor(img, x, y, r));
             }
         }
         if(null != world) {
