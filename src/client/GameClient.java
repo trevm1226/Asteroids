@@ -38,7 +38,7 @@ public class GameClient extends Client implements GameMode
         {
             if(!"".equals(part)) {
                 String[] parts2 = part.split(",");
-                String img = "rsrc/"+parts2[0]+".png";
+                String img = "img/" +parts2[0]+".png";
                 int x = Integer.parseInt(parts2[1]);
                 int y = Integer.parseInt(parts2[2]);
                 int r = Integer.parseInt(parts2[3]);
