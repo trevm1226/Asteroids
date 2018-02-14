@@ -1,15 +1,12 @@
 package server;
 
-import mayflower.Actor;
-import mayflower.Direction;
-import mayflower.MayflowerHeadless;
-import mayflower.World;
+import mayflower.*;
 import mayflower.net.Server;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ServerGame extends MayflowerHeadless
+public class ServerGame extends Mayflower
 {
     private Map<Integer, Actor> actors;
     private ServerWorld world;
