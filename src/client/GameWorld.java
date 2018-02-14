@@ -29,8 +29,8 @@ public class GameWorld extends World
         if(updates.isEmpty())
             return;
         List<Actor> actors = updates.remove();
-        //remove all GameActor objects
-        this.removeObjects(this.getObjects(GameActor.class));
+        //remove all SpaceActor objects
+        this.removeObjects(this.getObjects(SpaceActor.class));
 
         //add new objects
         for(Actor actor : actors)

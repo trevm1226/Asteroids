@@ -2,16 +2,16 @@ package client;
 
 import mayflower.Actor;
 
-public class GameActor extends Actor
+public class SpaceActor extends Actor
 {
-    public GameActor(String img, int x, int y, int r)
+    public SpaceActor(String img, int x, int y, int r)
     {
         setImage(img);
         setLocation(x, y);
         setRotation(r);
     }
 
-    public GameActor(String img, int x1, int y1, int r1, int x2, int y2, int r2, double p)
+    public SpaceActor(String img, int x1, int y1, int r1, int x2, int y2, int r2, double p)
     {
         //interpolate between two points
         double q = 1 - p;
@@ -31,6 +31,9 @@ public class GameActor extends Actor
 
     @Override
     public void act() {
+        //any obejcts that extend this must call super.act() in their act method()
+
+        
 
     }
 }
