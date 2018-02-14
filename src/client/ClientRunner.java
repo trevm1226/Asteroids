@@ -10,7 +10,7 @@ public class ClientRunner extends Mayflower
 {
     public ClientRunner()
     {
-        super("Client", 800, 600);
+        super("Client", 1024, 768);
     }
     @Override
     public void init()

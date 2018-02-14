@@ -15,6 +15,7 @@ public class GameWorld extends World
     public GameWorld(InputManager im)
     {
         this.im = im;
+        setBackground("img/background.png");
         updates = new LinkedList<List<Actor>>();
     }
 
