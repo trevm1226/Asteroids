@@ -1,6 +1,11 @@
 package server;
 
+import server.InputManager;
+import mayflower.Keyboard;
 import mayflower.net.Server;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MultiplayerServer extends Server
 {
@@ -13,6 +18,18 @@ public class MultiplayerServer extends Server
         lobby = new ServerGame(this);
 
         System.out.println("Server started.");
+
+
+
+        server.InputManager im = new InputManager();
+
+        Map<Integer, String> keys = new HashMap<Integer, String>();
+        keys.put(Keyboard.KEY_UP, "up");
+        keys.put(Keyboard.KEY_LEFT, "left");
+        keys.put(Keyboard.KEY_DOWN, "down");
+        keys.put(Keyboard.KEY_RIGHT, "right");
+        keys.put(Keyboard.KEY_SPACE, "shoot");
+        im.setKeyMap(keys);
     }
 
     @Override

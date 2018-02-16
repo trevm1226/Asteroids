@@ -1,5 +1,7 @@
 package server;
 
+import mayflower.Actor;
+import mayflower.Keyboard;
 import mayflower.Mayflower;
 import mayflower.net.Client;
 
@@ -7,16 +9,24 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class InputManager
+public class InputManager extends Actor
 {
     private GameMode mode;
     private Map<Integer, String> keyMap;
     private Client client;
+    private spaceshipActor ship;
 
     public InputManager()
     {
         keyMap = new HashMap<Integer, String>();
         this.client = client;
+        System.out.println("worked2");
+    }
+
+    @Override
+    public void act() {
+        System.out.println("workedeggeggbssbfg");
+        this.scan();
     }
 
     public InputManager(GameMode mode)
@@ -37,6 +47,7 @@ public class InputManager
 
     public void scan()
     {
+        System.out.println("pls work");
         if(null == mode)
             return;
 
@@ -49,7 +60,24 @@ public class InputManager
             if(Mayflower.isKeyPressed(key))
             {
                 System.out.println("Key Pressed: " + key);
-                mode.processPress(keyMap.get(key));
+                if (key.equals(Keyboard.KEY_UP))
+                {
+                    ship.addVelocity();
+                    System.out.println("worked");
+                }
+                if (key.equals(Keyboard.KEY_DOWN))
+                {
+                    ship.lessVelocity();
+                }
+                if (key.equals(Keyboard.KEY_RIGHT))
+                {
+                    ship.turnRight();
+                }
+                if (key.equals(Keyboard.KEY_LEFT))
+                {
+                    ship.turnLeft();
+                }
+                //mode.processPress(keyMap.get(key));
             }
             else if(Mayflower.wasKeyDown(key))
             {

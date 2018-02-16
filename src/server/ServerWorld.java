@@ -19,7 +19,7 @@ public class ServerWorld extends World
         setBackground("img/background.png");
         timer = new Timer(750000);
         this.server = server;
-        addObject(new SpaceActor("img/spaceship.png", 100,100,45),100,100);
+        addObject(new spaceshipActor(100,100,45),100,100);
         addObject(new Asteroid( 100,100,90, 1),100,100);
     }
 
