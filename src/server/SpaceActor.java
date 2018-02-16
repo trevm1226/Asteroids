@@ -4,7 +4,7 @@ import mayflower.Actor;
 
 public class SpaceActor extends Actor
 {
-    private double velocity;
+    private int velocity;
 
     public SpaceActor(String img, int x, int y, int r)
     {
@@ -26,12 +26,12 @@ public class SpaceActor extends Actor
         setRotation(r);
     }
 
-    public void setVelocity(double v)
+    public void setVelocity(int v)
     {
         velocity = v;
     }
 
-    public double getVelocity()
+    public int getVelocity()
     {
         return velocity;
     }
@@ -43,19 +43,19 @@ public class SpaceActor extends Actor
 
         if( x < -(this.getImage().getHeight()) )
         {
-
+            this.setLocation(1024, y );
         }
         if( x > 1024 )
         {
-
+            this.setLocation( -(this.getImage().getHeight()) + 1, y );
         }
         if( y < -(this.getImage().getHeight()) )
         {
-
+            this.setLocation( x, 768 );
         }
-        if( y < 768 )
+        if( y > 768 )
         {
-
+            this.setLocation( x, -(this.getImage().getHeight()) + 1 );
         }
     }
 
@@ -68,7 +68,7 @@ public class SpaceActor extends Actor
     public void act()
     {
         //any obejcts that extend this must call super.act() in their act method()
-
+        warp();
         
 
     }

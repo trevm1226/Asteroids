@@ -76,15 +76,15 @@
       <file leaf-file-name="SpaceActor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/server/SpaceActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+            <state relative-caret-position="488">
+              <caret line="57" column="67" lean-forward="false" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
               <folding>
-                <element signature="e#663#664#0" expanded="true" />
-                <element signature="e#691#692#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#1119#1120#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#721#722#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+                <element signature="e#1328#1329#0" expanded="true" />
+                <element signature="e#1424#1425#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,11 +131,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="777" />
-    <option name="y" value="160" />
-    <option name="width" value="1522" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -356,7 +356,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -565,12 +565,12 @@
         <state relative-caret-position="590">
           <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
           <folding>
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -777,15 +777,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/server/SpaceActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="488">
+          <caret line="57" column="67" lean-forward="false" selection-start-line="57" selection-start-column="67" selection-end-line="57" selection-end-column="67" />
           <folding>
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#1119#1120#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1424#1425#0" expanded="true" />
           </folding>
         </state>
       </provider>
