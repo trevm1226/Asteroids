@@ -28,7 +28,7 @@ public class SpaceActor extends Actor
 
     public void setVelocity(int v)
     {
-        velocity = v;
+        velocity = Math.abs(v);
     }
 
     public int getVelocity()
