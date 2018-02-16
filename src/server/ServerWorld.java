@@ -20,6 +20,7 @@ public class ServerWorld extends World
         timer = new Timer(750000);
         this.server = server;
         addObject(new SpaceActor("img/spaceship.png", 100,100,45),100,100);
+        addObject(new Asteroid( 100,100,90, 1),100,100);
     }
 
     @Override
@@ -34,16 +35,10 @@ public class ServerWorld extends World
     {
         if(timer.isDone())
         {
-            List<BoxActor> actors = getObjects(BoxActor.class);
-            for(Actor actor : actors)
+            List<SpaceActor> actors = getObjects(SpaceActor.class);
+            for(SpaceActor actor : actors)
             {
-                actor.move(10);
-                if(actor.isAtEdge())
-                {
-                    while(actor.isAtEdge())
-                        actor.move(-1);
-                    actor.turn(180);
-                }
+               actor.tick();
             }
 
             //System.out.println("tick: " + this.getObjects().size());

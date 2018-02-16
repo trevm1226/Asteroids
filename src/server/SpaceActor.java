@@ -44,18 +44,22 @@ public class SpaceActor extends Actor
         if( x < -(this.getImage().getHeight()) )
         {
             this.setLocation(1024, y );
+            System.out.println("wprked1");
         }
         if( x > 1024 )
         {
-            this.setLocation( -(this.getImage().getHeight()) + 1, y );
+            this.setLocation( (this.getImage().getHeight()) + 1, y );
+            System.out.println("wprked2");
         }
         if( y < -(this.getImage().getHeight()) )
         {
             this.setLocation( x, 768 );
+            System.out.println("wprke3");
         }
         if( y > 768 )
         {
-            this.setLocation( x, -(this.getImage().getHeight()) + 1 );
+            this.setLocation( x, (this.getImage().getHeight()) + 1 );
+            System.out.println("wprke4");
         }
     }
 
@@ -68,8 +72,12 @@ public class SpaceActor extends Actor
     public void act()
     {
         //any obejcts that extend this must call super.act() in their act method()
-        warp();
+        //warp();
         
 
+    }
+
+    public void tick(){
+        warp();
     }
 }
