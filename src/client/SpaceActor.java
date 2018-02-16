@@ -32,7 +32,7 @@ public class SpaceActor extends Actor
     @Override
     public void act() {
         //any obejcts that extend this must call super.act() in their act method()
-
+     //   if()
         
 
     }

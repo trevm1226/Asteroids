@@ -16,8 +16,10 @@ public class ServerWorld extends World
 
     public ServerWorld(Server server)
     {
+        setBackground("img/background.png");
         timer = new Timer(750000);
         this.server = server;
+        addObject(new SpaceActor("img/spaceship.png", 100,100,45),100,100);
     }
 
     @Override

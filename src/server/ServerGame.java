@@ -13,7 +13,7 @@ public class ServerGame extends Mayflower
 
     public ServerGame(Server server)
     {
-        super("Server", 800, 600);
+        super("Server", 1024, 768);
         actors = new HashMap<Integer, Actor>();
 
         world = new ServerWorld(server);
