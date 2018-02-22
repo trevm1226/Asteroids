@@ -30,7 +30,7 @@ public class GameClient extends Client implements GameMode
     @Override
     public void process(String s)
     {
-        System.out.println("Message From Server: " + s);
+        //System.out.println("Message From Server: " + s);
 
         List<Actor> actors = new LinkedList<Actor>();
         String[] parts = s.split(":");
@@ -70,6 +70,6 @@ public class GameClient extends Client implements GameMode
 
     @Override
     public void processRelease(String action) {
-
+        send(action+"re");
     }
 }

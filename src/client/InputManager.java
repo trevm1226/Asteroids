@@ -1,5 +1,6 @@
 package client;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
 import mayflower.Mayflower;
 import mayflower.net.Client;
 
@@ -12,6 +13,7 @@ public class InputManager
     private GameMode mode;
     private Map<Integer, String> keyMap;
     private Client client;
+    private int lastKey = -1;
 
     public InputManager()
     {
@@ -49,11 +51,15 @@ public class InputManager
             if(Mayflower.isKeyPressed(key))
             {
                 System.out.println("Key Pressed: " + key);
+                lastKey = key;
+              //  System.out.println(key);
                 mode.processPress(keyMap.get(key));
             }
-            else if(Mayflower.wasKeyDown(key))
+            else if(!Mayflower.isKeyDown(lastKey))
             {
-                //mode.processRelease(keyMap.get(key));
+
+
+                mode.processRelease(keyMap.get(lastKey));
             }
         }
     }

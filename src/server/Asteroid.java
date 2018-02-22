@@ -22,7 +22,7 @@ public class Asteroid extends SpaceActor
     @Override
     public void tick() {
         super.tick();
-        System.out.println(this.getX()+":"+this.getY());
+        //System.out.println(this.getX()+":"+this.getY());
         this.move(velocity);
     }
 

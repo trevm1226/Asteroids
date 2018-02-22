@@ -1,5 +1,6 @@
 package server;
 
+import mayflower.Keyboard;
 import mayflower.Mayflower;
 import mayflower.net.Client;
 
@@ -50,7 +51,7 @@ public class InputManager
             {
                 System.out.println("Key Pressed: " + key);
 
-                if (key.equals(Keyboard.KEY_UP))
+             /*   if (key.equals(Keyboard.KEY_UP))
                 {
                     ship.addVelocity();
                     System.out.println("worked");
@@ -63,10 +64,11 @@ public class InputManager
                 {
                     ship.turnRight();
                 }
+
                 if (key.equals(Keyboard.KEY_LEFT))
                 {
                     ship.turnLeft();
-                }
+                }*/
                 //mode.processPress(keyMap.get(key));
                 //trevorisadigus
 

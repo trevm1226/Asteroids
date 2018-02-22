@@ -8,13 +8,13 @@ import java.util.Map;
 
 public class ServerGame extends Mayflower
 {
-    private Map<Integer, Actor> actors;
+    private Map<Integer, spaceshipActor> actors;
     private ServerWorld world;
 
     public ServerGame(Server server)
     {
         super("Server", 1024, 768);
-        actors = new HashMap<Integer, Actor>();
+        actors = new HashMap<Integer, spaceshipActor>();
 
         world = new ServerWorld(server);
         this.setWorld(world);
@@ -22,22 +22,34 @@ public class ServerGame extends Mayflower
 
     public void process(int i, String s)
     {
-        Actor actor = actors.get(i);
+        spaceshipActor actor = actors.get(i);
         if(actor != null)
         {
             switch(s)
             {
                 case "up":
-                    actor.setRotation(Direction.NORTH);
+                    actor.makeAccel(1);
                     break;
                 case "down":
-                    actor.setRotation(Direction.SOUTH);
+                    actor.makeDecel(1);
                     break;
                 case "left":
-                    actor.setRotation(Direction.WEST);
+                    actor.makeTurnL(1);
                     break;
                 case "right":
-                    actor.setRotation(Direction.EAST);
+                    actor.makeTurnR(1);
+                case "upre":
+                    actor.makeAccel(0);
+                    System.out.println("uprealesed");
+                    break;
+                case "downre":
+                    actor.makeDecel(0);
+                    break;
+                case "leftre":
+                    actor.makeTurnL(0);
+                    break;
+                case "rightre":
+                    actor.makeTurnR(0);
                     break;
             }
             //actor.move(10);
@@ -46,9 +58,9 @@ public class ServerGame extends Mayflower
 
     public void join(int i)
     {
-        Actor actor = new BoxActor();
         int x = (int)(Math.random() * 700) + 50;
         int y = (int)(Math.random() * 500) + 50;
+        spaceshipActor actor = new spaceshipActor(x,y,0, i);
         world.addObject(actor, x, y);
 
         actors.put(i, actor);
