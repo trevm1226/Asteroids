@@ -78,6 +78,7 @@ public class InputManager extends Actor
                     ship.turnLeft();
                 }
                 //mode.processPress(keyMap.get(key));
+                //trevorisadigus
             }
             else if(Mayflower.wasKeyDown(key))
             {
