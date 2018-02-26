@@ -25,7 +25,7 @@ public class spaceshipActor extends SpaceActor {
     public void addVelocity()
     {
         if(v<maxV){v+=.1;}
-        System.out.println("workingup");
+       // System.out.println("workingup");
     }
 
     public void lessVelocity()

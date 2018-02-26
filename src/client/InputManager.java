@@ -41,23 +41,25 @@ public class InputManager
     {
         if(null == mode)
             return;
-
+        //TODO: Make this work
         //read input from user
         //convert key-->action
         //pass action to game mode
         Set<Integer> keys = keyMap.keySet();
         for(Integer key : keys)
         {
-            if(Mayflower.isKeyPressed(key))
+           if(Mayflower.isKeyPressed(key))
             {
-                System.out.println("Key Pressed: " + key);
+               // System.out.println("Key Pressed: " + key);
                 lastKey = key;
               //  System.out.println(key);
                 mode.processPress(keyMap.get(key));
             }
-            else if(!Mayflower.isKeyDown(key))
+            else if(!Mayflower.isKeyPressed(lastKey))
             {
-                mode.processRelease(keyMap.get(key));
+                if(lastKey == 87)
+                System.out.println("ram");
+                mode.processRelease(keyMap.get(lastKey));
             }
         }
     }

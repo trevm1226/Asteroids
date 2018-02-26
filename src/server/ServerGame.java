@@ -22,6 +22,7 @@ public class ServerGame extends Mayflower
 
     public void process(int i, String s)
     {
+        System.out.println(s);
         spaceshipActor actor = actors.get(i);
         if(actor != null)
         {
