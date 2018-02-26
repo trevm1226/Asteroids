@@ -39,6 +39,7 @@ public class ServerGame extends Mayflower
                 case "right":
                     actor.makeTurnR(1);
                 case "upre":
+                    if(actor.isAccelerating()) break;
                     actor.makeAccel(0);
                     System.out.println("uprealesed");
                     break;

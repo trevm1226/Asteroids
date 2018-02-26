@@ -2,7 +2,7 @@ package server;
 
 public class spaceshipActor extends SpaceActor {
 
-    private int x,y,r,id;
+    private int x,y,r,id, turnRate;
     private Double v, maxV;
     private boolean isAccelerating, isDecelerating, isTurningLeft, isTurningRight;
 
@@ -12,8 +12,15 @@ public class spaceshipActor extends SpaceActor {
         super("img/spaceship.png", x, y, r);
         this.x = x; this.y = y; this.r = r; this.id = i;
         v = 0.0;
+        turnRate = 1;
         maxV = 15.0;
     }
+
+    public boolean isAccelerating()
+    {
+        return isAccelerating;
+    }
+
 
     public void addVelocity()
     {
@@ -24,17 +31,19 @@ public class spaceshipActor extends SpaceActor {
     public void lessVelocity()
     {
         if(v>0){v-=.1;}
-        System.out.println("down");
+        //System.out.println("down");
     }
 
     public void turnLeft()
     {
-        turn(-1);
+        if(v == 0) turn(-1*turnRate);
+        else turn((int)(-1*turnRate*v));
     }
 
     public void turnRight()
     {
-        turn(1);
+        if(v == 0) turn(turnRate);
+        else turn((int)(turnRate*v));
     }
 
     public void makeAccel(int x)
@@ -64,7 +73,7 @@ public class spaceshipActor extends SpaceActor {
     {
         super.tick();
         // System.out.println(v);
-        System.out.println(isAccelerating);
+        //System.out.println(isAccelerating);
         if(isAccelerating)addVelocity();
         else if(!isAccelerating)lessVelocity();
         if(isTurningRight)turnRight();

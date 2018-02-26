@@ -55,11 +55,9 @@ public class InputManager
               //  System.out.println(key);
                 mode.processPress(keyMap.get(key));
             }
-            else if(!Mayflower.isKeyDown(lastKey))
+            else if(!Mayflower.isKeyDown(key))
             {
-
-
-                mode.processRelease(keyMap.get(lastKey));
+                mode.processRelease(keyMap.get(key));
             }
         }
     }
