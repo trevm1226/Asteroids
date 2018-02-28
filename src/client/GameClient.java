@@ -71,5 +71,6 @@ public class GameClient extends Client implements GameMode
     @Override
     public void processRelease(String action) {
         send(action+"re");
+        System.out.println("Sendingre: " + action);
     }
 }

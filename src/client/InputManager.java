@@ -55,10 +55,8 @@ public class InputManager
               //  System.out.println(key);
                 mode.processPress(keyMap.get(key));
             }
-            else if(!Mayflower.isKeyPressed(lastKey))
+            if(!Mayflower.isKeyDown(lastKey)&&Mayflower.wasKeyDown(lastKey))
             {
-                if(lastKey == 87)
-                System.out.println("ram");
                 mode.processRelease(keyMap.get(lastKey));
             }
         }

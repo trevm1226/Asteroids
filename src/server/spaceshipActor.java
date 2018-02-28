@@ -20,6 +20,9 @@ public class spaceshipActor extends SpaceActor {
     {
         return isAccelerating;
     }
+    public boolean isTurningLeft(){return isTurningLeft;}
+    public boolean isTurningRight(){return isTurningRight;}
+    public boolean isDecelerating(){return isDecelerating;}
 
 
     public void addVelocity()
@@ -38,6 +41,7 @@ public class spaceshipActor extends SpaceActor {
     {
         if(v == 0) turn(-1*turnRate);
         else turn((int)(-1*turnRate*v));
+        System.out.println("runningbb");
     }
 
     public void turnRight()
@@ -58,6 +62,7 @@ public class spaceshipActor extends SpaceActor {
     }
     public void makeTurnL(int x)
     {
+        System.out.println(x + "x");
         if(x == 1)isTurningLeft = true;
         else isTurningLeft = false;
     }
@@ -74,6 +79,8 @@ public class spaceshipActor extends SpaceActor {
         super.tick();
         // System.out.println(v);
         //System.out.println(isAccelerating);
+        System.out.println(isTurningLeft + "isturningleft");
+        System.out.println(isTurningRight + "isturningright");
         if(isAccelerating)addVelocity();
         else if(!isAccelerating)lessVelocity();
         if(isTurningRight)turnRight();
