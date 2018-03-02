@@ -55,23 +55,30 @@ public class spaceshipActor extends SpaceActor {
         if(x == 1)isAccelerating = true;
         else isAccelerating = false;
     }
+
     public void makeDecel(int x)
     {
         if(x == 1)isDecelerating = true;
         else isDecelerating = false;
     }
+
     public void makeTurnL(int x)
     {
         System.out.println(x + "x");
         if(x == 1)isTurningLeft = true;
         else isTurningLeft = false;
     }
+
     public void makeTurnR(int x)
     {
         if(x == 1)isTurningRight = true;
         else isTurningRight = false;
     }
 
+    public void shoot()
+    {
+        getWorld().addObject(new laserBeam(x,y,getRotation()),x,y);
+    }
 
     @Override
     public void tick()
@@ -79,8 +86,8 @@ public class spaceshipActor extends SpaceActor {
         super.tick();
         // System.out.println(v);
         //System.out.println(isAccelerating);
-        System.out.println(isTurningLeft + "isturningleft");
-        System.out.println(isTurningRight + "isturningright");
+        //System.out.println(isTurningLeft + "isturningleft");
+       // System.out.println(isTurningRight + "isturningright");
         if(isAccelerating)addVelocity();
         else if(!isAccelerating)lessVelocity();
         if(isTurningRight)turnRight();

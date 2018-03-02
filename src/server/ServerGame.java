@@ -55,6 +55,8 @@ public class ServerGame extends Mayflower
                     if(actor.isTurningRight())
                     actor.makeTurnR(0);
                     break;
+                case "shoot":
+                    actor.shoot();
             }
             //actor.move(10);
         }

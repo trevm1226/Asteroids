@@ -64,13 +64,13 @@ public class GameClient extends Client implements GameMode
 
     @Override
     public void processPress(String action) {
-        System.out.println("Sending: " + action);
+        //System.out.println("Sending: " + action);
         send(action);
     }
 
     @Override
     public void processRelease(String action) {
         send(action+"re");
-        System.out.println("Sendingre: " + action);
+        //System.out.println("Sendingre: " + action);
     }
 }
