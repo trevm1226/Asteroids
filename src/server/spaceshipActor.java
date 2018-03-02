@@ -41,15 +41,29 @@ public class spaceshipActor extends SpaceActor {
 
     public void turnLeft()
     {
-        if(v == 0) turn(-1*turnRate);
-        else turn((int)(-1*turnRate*v));
+        if(v == 0) {
+            turn(-1*turnRate);
+            turd.turn(-1*turnRate);
+        }
+        else {
+            turn((int)(-1*turnRate*v));
+            turd.turn((int)(-1*turnRate*v));
+        }
         System.out.println("runningbb");
     }
 
     public void turnRight()
     {
-        if(v == 0) turn(turnRate);
-        else turn((int)(turnRate*v));
+        if(v == 0)
+        {
+            turn(turnRate);
+            turd.turn(turnRate);
+        }
+        else
+        {
+            turn((int)(turnRate*v));
+            turd.turn((int)(turnRate*v));
+        }
     }
 
     public void makeAccel(int x)
@@ -66,7 +80,7 @@ public class spaceshipActor extends SpaceActor {
 
     public void makeTurnL(int x)
     {
-        System.out.println(x + "x");
+        //System.out.println(x + "x");
         if(x == 1)isTurningLeft = true;
         else isTurningLeft = false;
     }
@@ -95,6 +109,7 @@ public class spaceshipActor extends SpaceActor {
         if(isTurningRight)turnRight();
         else if(isTurningLeft)turnLeft();
         this.move(v);
+        turd.move(v);
     }
 
     public String toString()
