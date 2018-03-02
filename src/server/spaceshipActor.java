@@ -5,12 +5,14 @@ public class spaceshipActor extends SpaceActor {
     private int x,y,r,id, turnRate;
     private Double v, maxV;
     private boolean isAccelerating, isDecelerating, isTurningLeft, isTurningRight;
+    private turret turd;
 
 
     public spaceshipActor(int x, int y, int r, int i)
     {
         super("img/spaceship.png", x, y, r);
         this.x = x; this.y = y; this.r = r; this.id = i;
+        turd = new turret(x,y,r);
         v = 0.0;
         turnRate = 1;
         maxV = 15.0;
