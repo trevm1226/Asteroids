@@ -57,7 +57,7 @@ public class ServerWorld extends World
     {
         String str = "";
 
-        List<BoxActor> actors = getObjects(BoxActor.class);
+        List<SpaceActor> actors = getObjects(SpaceActor.class);
         for(Actor actor : actors)
         {
             str += actor.toString() + ":";
