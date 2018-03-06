@@ -57,6 +57,13 @@ public class ServerGame extends Mayflower
                     break;
                 case "shoot":
                     actor.shoot();
+                    break;
+                case "turnTR":
+                    actor.turnT(1);
+                    break;
+                case "turnTL":
+                    actor.turnT(0);
+                    break;
             }
             //actor.move(10);
         }
@@ -67,7 +74,9 @@ public class ServerGame extends Mayflower
         int x = (int)(Math.random() * 700) + 50;
         int y = (int)(Math.random() * 500) + 50;
         spaceshipActor actor = new spaceshipActor(x,y,0, i);
+        turret turff = new turret(x,y,0, actor);
         world.addObject(actor, x, y);
+        world.addObject(turff, x,y);
 
         actors.put(i, actor);
     }

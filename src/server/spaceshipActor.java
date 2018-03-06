@@ -12,7 +12,7 @@ public class spaceshipActor extends SpaceActor {
     {
         super("img/spaceship.png", x, y, r);
         this.x = x; this.y = y; this.r = r; this.id = i;
-        turd = new turret(x,y,r);
+        turd = new turret(this.getCenterX(),this.getCenterY(),r, this);
         v = 0.0;
         turnRate = 1;
         maxV = 15.0;
@@ -25,6 +25,12 @@ public class spaceshipActor extends SpaceActor {
     public boolean isTurningLeft(){return isTurningLeft;}
     public boolean isTurningRight(){return isTurningRight;}
     public boolean isDecelerating(){return isDecelerating;}
+
+    public void turnT(int i)
+    {
+        if(i == 1) turd.turnRight();
+        else if(i == 0) turd.turnLeft();
+    }
 
 
     public void addVelocity()
@@ -57,12 +63,10 @@ public class spaceshipActor extends SpaceActor {
         if(v == 0)
         {
             turn(turnRate);
-            turd.turn(turnRate);
         }
         else
         {
             turn((int)(turnRate*v));
-            turd.turn((int)(turnRate*v));
         }
     }
 
@@ -93,7 +97,7 @@ public class spaceshipActor extends SpaceActor {
 
     public void shoot()
     {
-        getWorld().addObject(new laserBeam(this.getCenterX(),this.getCenterY(),getRotation()),this.getCenterX(),this.getCenterY());
+        turd.shoot();
     }
 
     @Override
