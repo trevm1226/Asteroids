@@ -1,4 +1,4 @@
-package server;
+package client;
 
 public class laserBeam extends SpaceActor {
     private int x,y,r,hit;

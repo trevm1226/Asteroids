@@ -43,7 +43,9 @@ public class GameClient extends Client implements GameMode
                 int y = Integer.parseInt(parts2[2]);
                 int r = Integer.parseInt(parts2[3]);
                 if(type.equals("ship"))
-                actors.add(new SpaceActor(x, y, r, i));
+                    actors.add(new spaceshipActor(x, y, r, 0));
+                if(type.equals("turret"))
+                    actors.add(new turret(x, y, r));
             }
         }
         if(null != world) {

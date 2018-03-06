@@ -13,4 +13,8 @@ public class turret extends SpaceActor{
     public void tick() {
         super.tick();
     }
+    public String toString()
+    {
+        return "turret,"+getX()+","+getY()+","+getRotation();
+}
 }

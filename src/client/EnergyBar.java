@@ -1,4 +1,4 @@
-package server;
+package client;
 
 import mayflower.*;
 import java.util.ArrayList;

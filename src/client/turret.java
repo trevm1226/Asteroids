@@ -1,4 +1,4 @@
-package server;
+package client;
 
 public class turret extends SpaceActor{
     private int x,y,r;
