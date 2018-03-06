@@ -38,12 +38,14 @@ public class GameClient extends Client implements GameMode
         {
             if(!"".equals(part)) {
                 String[] parts2 = part.split(",");
-                String img = "img/" +parts2[0]+".png";
+                String type = parts2[0];
                 int x = Integer.parseInt(parts2[1]);
                 int y = Integer.parseInt(parts2[2]);
                 int r = Integer.parseInt(parts2[3]);
-
-                //actors.add(new SpaceActor(img, x, y, r));
+                if(type.equals("ship"))
+                    actors.add(new spaceshipActor(x, y, r, 0));
+                if(type.equals("turret"))
+                    actors.add(new turret(x, y, r));
             }
         }
         if(null != world) {
