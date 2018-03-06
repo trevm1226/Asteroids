@@ -93,7 +93,7 @@ public class spaceshipActor extends SpaceActor {
 
     public void shoot()
     {
-        getWorld().addObject(new laserBeam(x,y,getRotation()),x,y);
+        getWorld().addObject(new laserBeam(this.getCenterX(),this.getCenterY(),getRotation()),this.getCenterX(),this.getCenterY());
     }
 
     @Override
