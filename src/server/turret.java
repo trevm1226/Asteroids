@@ -7,6 +7,8 @@ public class turret extends SpaceActor{
         super("img/turret.png", xpos,ypos,rot);
     }
 
+
+
     @Override
     public void tick() {
         super.tick();
