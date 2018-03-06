@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f2e651a2-e5b0-40de-a8c7-343d3d2a8f2c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/Asteroid.java" afterPath="$PROJECT_DIR$/src/client/Asteroid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/Bar.java" afterPath="$PROJECT_DIR$/src/client/Bar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/EnergyBar.java" afterPath="$PROJECT_DIR$/src/client/EnergyBar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/GameClient.java" afterPath="$PROJECT_DIR$/src/client/GameClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/SpaceActor.java" afterPath="$PROJECT_DIR$/src/client/SpaceActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/laserBeam.java" afterPath="$PROJECT_DIR$/src/client/laserBeam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/spaceshipActor.java" afterPath="$PROJECT_DIR$/src/client/spaceshipActor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/client/turret.java" afterPath="$PROJECT_DIR$/src/client/turret.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/turret.java" afterPath="$PROJECT_DIR$/src/server/turret.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameClient.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/client/GameClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="102">
+              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -52,12 +45,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Asteroid.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/Asteroid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-              <folding />
+            <state relative-caret-position="483">
+              <caret line="100" column="80" lean-forward="false" selection-start-line="100" selection-start-column="80" selection-end-line="100" selection-end-column="80" />
+              <folding>
+                <element signature="e#2817#2818#0" expanded="true" />
+                <element signature="e#2905#2906#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -183,10 +179,10 @@
         <option value="$PROJECT_DIR$/src/client/turret.java" />
         <option value="$PROJECT_DIR$/src/server/turret.java" />
         <option value="$PROJECT_DIR$/src/client/laserBeam.java" />
-        <option value="$PROJECT_DIR$/src/client/GameClient.java" />
         <option value="$PROJECT_DIR$/src/client/EnergyBar.java" />
         <option value="$PROJECT_DIR$/src/client/Bar.java" />
         <option value="$PROJECT_DIR$/src/client/Asteroid.java" />
+        <option value="$PROJECT_DIR$/src/client/GameClient.java" />
       </list>
     </option>
   </component>
@@ -889,10 +885,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/GameClient.java">
+    <entry file="file://$PROJECT_DIR$/src/client/Bar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -905,18 +901,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Bar.java">
+    <entry file="file://$PROJECT_DIR$/src/client/Asteroid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="483">
+          <caret line="100" column="80" lean-forward="false" selection-start-line="100" selection-start-column="80" selection-end-line="100" selection-end-column="80" />
+          <folding>
+            <element signature="e#2817#2818#0" expanded="true" />
+            <element signature="e#2905#2906#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/Asteroid.java">
+    <entry file="file://$PROJECT_DIR$/src/client/GameClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+        <state relative-caret-position="102">
+          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding />
         </state>
       </provider>
