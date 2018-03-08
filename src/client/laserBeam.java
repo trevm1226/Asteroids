@@ -3,7 +3,7 @@ package client;
 public class laserBeam extends SpaceActor {
     private int x,y,r,hit;
     public laserBeam(int xpos, int ypos, int rot){
-        super("img/laser.png", xpos, ypos, rot);
+        super("img/laser.png", xpos, ypos, rot,-1);
         x = xpos; y = ypos; r = rot;
         setRotation(r);
         hit=0;

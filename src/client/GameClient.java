@@ -3,12 +3,15 @@ package client;
 import mayflower.Actor;
 import mayflower.net.Client;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class GameClient extends Client implements GameMode
 {
     private GameWorld world;
+    private Map<Integer,SpaceActor> actorMap;
 
     public GameClient()
     {
@@ -20,6 +23,7 @@ public class GameClient extends Client implements GameMode
         System.out.println("Connecting");
         this.connect(ip, 1234);
         System.out.println("Connected");
+        actorMap = new HashMap<Integer, SpaceActor>();
     }
 
     public void setWorld(GameWorld world)
@@ -42,15 +46,44 @@ public class GameClient extends Client implements GameMode
                 int x = Integer.parseInt(parts2[1]);
                 int y = Integer.parseInt(parts2[2]);
                 int r = Integer.parseInt(parts2[3]);
-                int v = 0;
-                if(parts2.length>4)
-                    v = Integer.parseInt(parts2[4]);
-                if(type.equals("ship"))
-                    actors.add(new spaceshipActor(x, y, r, 0));
-                if(type.equals("turret"))
-                    actors.add(new turret(x, y, r));
-                if(type.equals("asteroid"))
-                    actors.add(new Asteroid(x,y,r,v));
+                int v = Integer.parseInt(parts2[4]);
+                int i = Integer.parseInt(parts2[5]);
+
+                        if (type.equals("ship")) {
+                            SpaceActor a;
+                        if(!actorMap.containsKey(i)&&!actorMap.isEmpty()) {
+                           a = new spaceshipActor(x, y, r, v, i);
+                        }
+                        else{
+                            a=actorMap.get(i);a.setRotation(r);a.setLocation(x,y);a.setVelocity(v);
+                            }
+                        actorMap.put(i,a);
+                            actors.add(a);
+                    }
+                if (type.equals("turret")) {
+                    SpaceActor a;
+                    if(!actorMap.containsKey(i)&&!actorMap.isEmpty()) {
+                        a = new turret(x, y, r, i);
+                    }
+                    else{
+                        a=actorMap.get(i);a.setRotation(r);a.setLocation(x,y);a.setVelocity(v);
+                    }
+                    actorMap.put(i,a);
+                    actors.add(a);
+                }
+                if (type.equals("asteroid")) {
+                    SpaceActor a;
+                    if(!actorMap.containsKey(i)&&!actorMap.isEmpty()) {
+                        a = new Asteroid(x, y, r, v, i);
+                    }
+                    else{
+                        a=actorMap.get(i);a.setRotation(r);a.setLocation(x,y);a.setVelocity(v);
+                    }
+                    actorMap.put(i,a);
+                    actors.add(a);
+                }
+
+                System.out.println(actorMap.toString());
             }
         }
         if(null != world) {

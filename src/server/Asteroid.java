@@ -98,6 +98,6 @@ public class Asteroid extends SpaceActor
 
     public String toString()
     {
-        return "asteroid,"+getX()+","+getY()+","+getRotation();
+        return super.toString("asteroid");
     }
 }

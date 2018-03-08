@@ -31,8 +31,9 @@ public class turret extends SpaceActor{
         super.tick();
         this.setLocation(ship.getCenterX(), ship.getCenterY());
     }
+
     public String toString()
     {
-        return "turret,"+getX()+","+getY()+","+getRotation();
-}
+        return super.toString("ship");
+    }
 }

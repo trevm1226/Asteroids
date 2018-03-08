@@ -7,9 +7,9 @@ import mayflower.util.FastTrig;
 public class Asteroid extends SpaceActor
 {
     private int velocity;
-    public Asteroid(int x, int y, int r, int velocity)
+    public Asteroid(int x, int y, int r, int velocity, int i)
     {
-        super("img/largeAsteroid.png", x, y, r);
+        super("img/largeAsteroid.png", x, y, r, i);
         this.velocity = velocity;
         this.setVelocity(velocity);
     }

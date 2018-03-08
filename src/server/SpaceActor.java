@@ -5,12 +5,15 @@ import mayflower.Actor;
 public class SpaceActor extends Actor
 {
     private int velocity;
+    private static int nextId=0;
+    private int id;
 
     public SpaceActor(String img, int x, int y, int r)
     {
         setImage(img);
         setLocation(x, y);
         setRotation(r);
+        id = nextId++;
     }
 
     public SpaceActor(String img, int x1, int y1, int r1, int x2, int y2, int r2, double p)
@@ -24,6 +27,14 @@ public class SpaceActor extends Actor
         setImage(img);
         setLocation(x, y);
         setRotation(r);
+    }
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+    public int getId()
+    {
+        return id;
     }
 
     public void setVelocity(int v)
@@ -63,9 +74,13 @@ public class SpaceActor extends Actor
         }
     }
 
-    public String toString()
+   // public String toString()
+    //{
+      //  return getImage().toString() + "_" + getX() + "_" + getY() + "_" + getRotation();
+   // }
+    public String toString(String type)
     {
-        return getImage().toString() + "_" + getX() + "_" + getY() + "_" + getRotation();
+        return type+","+getX()+","+getY()+","+getRotation()+","+getVelocity()+","+getId();
     }
 
     @Override

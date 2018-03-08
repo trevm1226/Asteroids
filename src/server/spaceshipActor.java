@@ -8,12 +8,12 @@ public class spaceshipActor extends SpaceActor {
     private turret turd;
 
 
-    public spaceshipActor(int x, int y, int r, int i)
+    public spaceshipActor(int x, int y, int r,int v)
     {
         super("img/spaceship.png", x, y, r);
-        this.x = x; this.y = y; this.r = r; this.id = i;
-        turd = new turret(this.getCenterX(),this.getCenterY(),r, this);
-        v = 0.0;
+        this.x = x; this.y = y; this.r = r; this.id = this.getId(); //this.v =v;
+        //turd = new turret(this.getCenterX(),this.getCenterY(),r, this);
+
         turnRate = 1;
         maxV = 15.0;
     }
@@ -118,6 +118,6 @@ public class spaceshipActor extends SpaceActor {
 
     public String toString()
     {
-        return "ship,"+getX()+","+getY()+","+getRotation();
+        return super.toString("ship");
     }
 }
