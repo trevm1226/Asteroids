@@ -46,20 +46,54 @@ public class InputManager
         //convert key-->action
         //pass action to game mode
         Set<Integer> keys = keyMap.keySet();
+
+        //Creates two Strings to track the keys pressed and released
+        String press = "";
+        String release = "";
+
+        //Gets the keys that are being pressed and released at this moment
         for(Integer key : keys)
         {
            if(Mayflower.isKeyPressed(key))
             {
                // System.out.println("Key Pressed: " + key);
-                lastKey = key;
               //  System.out.println(key);
-                mode.processPress(keyMap.get(key));
+                press += keyMap.get(key) + ",";
+                //System.out.println(press);
             }
-            if(!Mayflower.isKeyDown(lastKey)&&Mayflower.wasKeyDown(lastKey))
+            if(!Mayflower.isKeyDown(key) && Mayflower.wasKeyDown(key))
             {
-                mode.processRelease(keyMap.get(lastKey));
+                release += keyMap.get(key) + "re,";
+                //System.out.println(release);
             }
         }
+
+        //Removes the annoying comma at the ends of the Strings if any
+        if(press.length() > 0){press = press.substring(0, press.length() - 1);}
+        if(release.length() > 0){release = release.substring(0, release.length() - 1);}
+
+        //Turns the large Strings into smaller chunks
+        String[] pressed = press.split(",");
+        String[] released = release.split(",");
+
+        //Loops through the keys pressed and released and processes them if they are not empty
+        for(String p : pressed)
+        {
+            if(!p.equals(""))
+            {
+                mode.processPress(p);
+                System.out.println(p);
+            }
+        }
+        for(String r : released)
+        {
+            if(!r.equals(""))
+            {
+                mode.processRelease(r);
+                System.out.println(r);
+            }
+        }
+
     }
 
 }
