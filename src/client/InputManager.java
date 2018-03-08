@@ -47,7 +47,7 @@ public class InputManager
         //pass action to game mode
         Set<Integer> keys = keyMap.keySet();
 
-        //Creates two Strings to track the keys pressed and released
+        //Creates two Strings to track the keys pressed and released (NOT NEEDED!)
         String press = "";
         String release = "";
 
@@ -58,15 +58,20 @@ public class InputManager
             {
                // System.out.println("Key Pressed: " + key);
               //  System.out.println(key);
-                press += keyMap.get(key) + ",";
+                //press += keyMap.get(key) + ",";
+                mode.processPress(keyMap.get(key));
                 //System.out.println(press);
             }
             if(!Mayflower.isKeyDown(key) && Mayflower.wasKeyDown(key))
             {
-                release += keyMap.get(key) + "re,";
+                //release += keyMap.get(key) + "re,";
+                mode.processRelease(keyMap.get(key) + "re");
                 //System.out.println(release);
             }
         }
+/*
+
+    TODO: IGNORE ALL OF THIS! This is far more complicated a system than it needs to be!
 
         //Removes the annoying comma at the ends of the Strings if any
         if(press.length() > 0){press = press.substring(0, press.length() - 1);}
@@ -93,7 +98,7 @@ public class InputManager
                 System.out.println(r);
             }
         }
-
+*/
     }
 
 }
